@@ -4,10 +4,8 @@
 
 ## Demo
 
-- Live Demo: `<VERCEL_URL>`
-- Demo Video: `<VIDEO_URL>`
+- Live Demo: https://flavorgraph-ten.vercel.app/
 
-> **Submission gate:** the assignment's deliverables section marks both a hosted application and a short recording as mandatory. Replace both placeholders before sending the repository to Wexa AI.
 
 ## What problem does FlavorGraph solve?
 
@@ -222,21 +220,6 @@ cd ../frontend && npm run lint && npm run build
 
 Unit tests cover service delegation/business boundaries, DTO normalization, the health contract, safe database error mapping, and application wiring. They do not require production CognoDB.
 
-## Deployment
-
-### Backend (Render or Railway)
-
-1. On Render, create a Blueprint from the repository's `render.yaml` (or create a Java service rooted at `backend` manually).
-2. Build with `./mvnw clean package -DskipTests`; start with `java -jar target/backend-0.0.1-SNAPSHOT.jar`.
-3. Set `COGNODB_URI`, `COGNODB_USERNAME`, `COGNODB_PASSWORD`, and the eventual Vercel origin as `FRONTEND_URL`.
-4. Temporarily set `SEED_DATABASE=true` for the first successful boot, then set it to `false` and redeploy.
-5. Record the HTTPS backend URL.
-
-### Frontend (Vercel)
-
-1. Import the repository, set root directory `frontend`, build command `npm run build`, output `dist`.
-2. Set `VITE_API_BASE_URL` to the backend HTTPS URL. It is not a secret.
-3. Deploy, then update backend `FRONTEND_URL` to the exact Vercel origin.
 
 ## Screenshots
 
