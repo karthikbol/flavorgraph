@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: flavorgraph-api
+    runtime: java
+    rootDir: backend
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/backend-0.0.1-SNAPSHOT.jar
+    healthCheckPath: /api/health
+    envVars:
+      - key: COGNODB_URI
+        sync: false
+      - key: COGNODB_USERNAME
+        sync: false
+      - key: COGNODB_PASSWORD
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: SEED_DATABASE
+        value: "false"
