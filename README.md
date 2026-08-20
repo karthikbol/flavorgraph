@@ -5,6 +5,7 @@
 ## Demo
 
 - Live Demo: https://flavorgraph-ten.vercel.app/
+- Demo Video: https://drive.google.com/file/d/1nn5wAFvC5pgrjS7OeBGW7mg4UdZUHwhP/view
 
 
 ## What problem does FlavorGraph solve?
